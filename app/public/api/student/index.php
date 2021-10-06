@@ -2,19 +2,11 @@
 
 require 'class/DbConnection.php';
 
-echo ":::";
-// print_R($_ENV);
-echo getenv('MYSQL_HOST');
-
-
 // Step 1: Get a datase connection from our helper class
 $db = DbConnection::getConnection();
 
-echo $db;
-exit;
-
 // Step 2: Create & run the query
-$sql = 'SELECT * FROM Students';
+$sql = 'SELECT * FROM student';
 $vars = [];
 
 // if (isset($_GET['guid'])) {
